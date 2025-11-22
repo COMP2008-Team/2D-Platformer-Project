@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using System.Collections;
  
 
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     // For health
     public int health = 100;
+    public Image healthImage;
 
     // Public variables appear in the Inspector, so you can tweak them without editing code.
     public float moveSpeed = 4f;       // How fast the player moves left/right
@@ -60,6 +62,9 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
         */
+
+        // For health
+        healthImage.fillAmount = health / 100f;
     }
 
     private void FixedUpdate()
@@ -91,6 +96,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        // UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneYuan");
     }
 }
