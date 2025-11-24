@@ -6,6 +6,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    public int coin;
     // For health
     public int health = 100;
     public Image healthImage;
