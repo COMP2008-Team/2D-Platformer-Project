@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 54522180897507154, guid: dc1fd9d2870c34a45b3e7fdea4a7ced6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.93207544, g: 0.41327873, b: 0.41327873, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -170,7 +170,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -7925157222857896072, guid: dc1fd9d2870c34a45b3e7fdea4a7ced6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.93207544, g: 0.41327873, b: 0.41327873, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -260,7 +260,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -4227913453271759177, guid: dc1fd9d2870c34a45b3e7fdea4a7ced6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.93207544, g: 0.41327873, b: 0.41327873, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -280,8 +280,9 @@ GameObject:
   m_Component:
   - component: {fileID: 193062079195149560}
   - component: {fileID: -6853266419033958421}
+  - component: {fileID: 5487870638060192883}
   m_Layer: 6
-  m_Name: platform
+  m_Name: PlatformB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,3 +352,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6136756, y: 0.16420218}
   m_EdgeRadius: 0
+--- !u!114 &5487870638060192883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8333658924381551981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4763722f7a9985d45b4156ce490f7183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MovingPlatform
+  distance: 3
+  speed: 2
