@@ -6,6 +6,7 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
+    public int coin;
     // For health
     public int health = 100;
     public Image healthImage;
@@ -96,7 +97,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        // UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneYuan");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
+        // UnityEngine.SceneManagement.SceneManager.LoadScene("SceneYuan");
     }
 }
