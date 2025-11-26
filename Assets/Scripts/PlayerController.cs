@@ -26,12 +26,23 @@ public class PlayerController : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    //private variables to refernce the animator when doing animations
+    private Animator animator;
+
+    //double jump script
+    public int extraJumpsValue = 1;
+    private int extraJumps;
+
     void Start()
     {
         // Grab the Rigidbody2D attached to the Player object once at the start.
         rb = GetComponent<Rigidbody2D>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        //for the animator
+        animator = GetComponent<Animator>();
+        extraJumps = extraJumpsValue;
     }
 
     void Update()
@@ -42,10 +53,25 @@ public class PlayerController : MonoBehaviour
         // Apply horizontal speed while keeping the current vertical velocity.
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        // Jump for episode 1
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
+        //double jump for episode 3
+        if(isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            extraJumps = extraJumpsValue;
+        }    
+
+        //modified for episode 3
+        // Jump for episode 1
+        if (Input.GetKeyDown(KeyCode.Space)) 
+        {
+            if (isGrounded)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            }
+            else if(extraJumps > 0)
+            {
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                extraJumps--;
+            }
         }
 
         /* Jump realated code for the Jump Feature (later)
@@ -66,6 +92,10 @@ public class PlayerController : MonoBehaviour
 
         // For health
         healthImage.fillAmount = health / 100f;
+
+
+        //for the animations
+        SetAnimation(moveInput);
     }
 
     private void FixedUpdate()
@@ -99,5 +129,33 @@ public class PlayerController : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
         // UnityEngine.SceneManagement.SceneManager.LoadScene("SceneYuan");
+    }
+
+    //for the animations
+    private void SetAnimation(float moveInput)
+    {
+        if (isGrounded)
+        {
+            if (moveInput == 0)
+            {
+                animator.Play("Player_idle");
+            }
+            else
+            {
+                animator.Play("Player_run");
+            }
+        }
+        else
+        {
+            if(rb.linearVelocityY    > 0)
+            {
+                animator.Play("Player_jump");
+            }
+            else
+            {
+                animator.Play("Player_fall");
+            }
+        }
+
     }
 }
