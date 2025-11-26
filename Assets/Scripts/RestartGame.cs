@@ -5,7 +5,7 @@ public class RestartGame : MonoBehaviour
 {
     public void LoadCurrentScene()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("SceneAnnick");
+        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
         Time.timeScale = 1; 
        ;
     }
