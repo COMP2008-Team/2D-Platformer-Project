@@ -12,8 +12,6 @@ public class Flag : MonoBehaviour
            Time.timeScale = 0;
             // Show the Win UI
             winUI.SetActive(true);
-
-           
         }
     }
 }
