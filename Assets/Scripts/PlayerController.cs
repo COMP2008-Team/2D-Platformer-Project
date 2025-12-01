@@ -127,8 +127,7 @@ public class PlayerController : MonoBehaviour
 
     private void Die()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
-        // UnityEngine.SceneManagement.SceneManager.LoadScene("SceneYuan");
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 
     //for the animations

@@ -961,6 +961,24 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 753308524c96d496aabe76a4820cc03b, type: 3}
+--- !u!1 &952176722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3430934716165874422, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+  m_PrefabInstance: {fileID: 1155993842}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &952176728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952176722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f665a4312e5147c98cb176b0d46af7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NextLevel
+  nextLevelName: SceneYuan
 --- !u!1001 &979358545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1220,6 +1238,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1387761152}
     m_Modifications:
+    - target: {fileID: 407885671516065084, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407885671516065084, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 952176728}
+    - target: {fileID: 407885671516065084, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadNextLevelScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 407885671516065084, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NextLevel, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 2080559526544044861, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
       propertyPath: m_Name
       value: WinUI
@@ -1308,18 +1342,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3430934716165874422, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      propertyPath: m_Name
+      value: NextLevelButton
+      objectReference: {fileID: 0}
     - target: {fileID: 4278845858772713671, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4304350821175091200, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      propertyPath: m_text
+      value: Next Level
       objectReference: {fileID: 0}
     - target: {fileID: 5402266286691700359, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -30
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7865112454693902368, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3430934716165874422, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 952176728}
   m_SourcePrefab: {fileID: 100100000, guid: 6a7c9b7e85b0d4141aba974d90a6ba04, type: 3}
 --- !u!224 &1155993843 stripped
 RectTransform:
