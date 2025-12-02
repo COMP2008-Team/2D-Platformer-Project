@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(rb.linearVelocityY    > 0)
+            if(rb.linearVelocity.y > 0)
             {
                 animator.Play("Player_jump");
             }
