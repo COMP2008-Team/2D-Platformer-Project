@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4095717806405279541}
   - component: {fileID: 4332038118662506250}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7903807926264353030}
   - component: {fileID: 4667152752885930704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_6 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2923994108151452570}
   - component: {fileID: 1535699556553051008}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7437907800250856642}
   - component: {fileID: 513400848067543824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlatformC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 27.274109, y: -4.7286377}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -362,7 +362,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 6.4041595, y: 7.248556}
   m_EdgeRadius: 0
 --- !u!1 &2589538705313974387
 GameObject:
@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183541784167711107}
   - component: {fileID: 7128318442156727589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   m_Component:
   - component: {fileID: 622208614798681121}
   - component: {fileID: 4385145038256172464}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -554,7 +554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7539225476963528299}
   - component: {fileID: 5778643704782981568}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -644,7 +644,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8609149914092163231}
   - component: {fileID: 6131812460964349595}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -734,7 +734,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4316769204435175184}
   - component: {fileID: 2464206198314998819}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6555060086629327847}
   - component: {fileID: 6566537612268068113}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -914,7 +914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4290604671058872834}
   - component: {fileID: 4369613693727142366}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1791789779840647325}
   - component: {fileID: 8083573619449221604}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7099122825057102229}
   - component: {fileID: 5910675886189633171}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_9 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5049941533766038979}
   - component: {fileID: 4991805583763300372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8467383575949128442}
   - component: {fileID: 5999303125217723243}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5979551772396617132}
   - component: {fileID: 6895233747395049301}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5719675396852103652}
   - component: {fileID: 4241343408854548823}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
