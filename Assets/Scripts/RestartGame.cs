@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class RestartGame : MonoBehaviour
 {
-    public void LoadCurrentScene()
+    public void LoadMainScene()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("MainScene");
         Time.timeScale = 1; 
