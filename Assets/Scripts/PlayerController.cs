@@ -20,6 +20,10 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.2f; // Size of the circle used to detect ground
     public LayerMask groundLayer;      // Which layer counts as "ground" (set in Inspector)
 
+    //public variables for audio clips
+    public AudioClip jumpClip;
+    public AudioClip HurtClip;
+
     // Private variables are used internally by the script.
     private Rigidbody2D rb;            // Reference to the Rigidbody2D component
     private bool isGrounded;           // True if player is standing on ground
@@ -29,6 +33,9 @@ public class PlayerController : MonoBehaviour
     //private variables to refernce the animator when doing animations
     private Animator animator;
 
+    //audio variable for the player
+
+    private AudioSource audioSource;
     //double jump script
     public int extraJumpsValue = 1;
     private int extraJumps;
@@ -43,6 +50,8 @@ public class PlayerController : MonoBehaviour
         //for the animator
         animator = GetComponent<Animator>();
         extraJumps = extraJumpsValue;
+        //for the audio
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -66,11 +75,13 @@ public class PlayerController : MonoBehaviour
             if (isGrounded)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+                PlaySFX(jumpClip);
             }
             else if(extraJumps > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 extraJumps--;
+                PlaySFX(jumpClip);
             }
         }
 
@@ -107,6 +118,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Damage")
         {
+            PlaySFX(HurtClip, 0.4f);  
             health -= 25;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             StartCoroutine(BlinkRed());
@@ -147,7 +159,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(rb.linearVelocityY    > 0)
+            if(rb.linearVelocity.y > 0)
             {
                 animator.Play("Player_jump");
             }
@@ -157,5 +169,11 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+    }
+    public void PlaySFX(AudioClip audioClip, float volume = 1f)
+    {
+        audioSource.volume = volume;
+        audioSource.clip = audioClip;
+        audioSource.Play();
     }
 }
