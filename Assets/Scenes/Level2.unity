@@ -279,6 +279,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoinUI
       objectReference: {fileID: 0}
+    - target: {fileID: 4703087296361345783, guid: 4ea0635d55a72cf46a023ca68b17f7b7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703087296361345783, guid: 4ea0635d55a72cf46a023ca68b17f7b7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4
+      objectReference: {fileID: 0}
     - target: {fileID: 9158535050421917601, guid: 4ea0635d55a72cf46a023ca68b17f7b7, type: 3}
       propertyPath: m_Pivot.x
       value: 0
