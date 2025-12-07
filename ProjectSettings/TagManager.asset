@@ -7,6 +7,7 @@ TagManager:
   - Damage
   - BounchPad
   - CoinText
+  - DamageLaser
   layers:
   - Default
   - TransparentFX
