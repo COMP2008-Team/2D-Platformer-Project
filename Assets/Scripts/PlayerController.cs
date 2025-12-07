@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using System.Collections;
- 
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     // Public variables appear in the Inspector, so you can tweak them without editing code.
     public float moveSpeed = 4f;       // How fast the player moves left/right
-    
+
     //Jump realated variables for the Jump Feature (later)
     public float jumpForce = 8f;      // How strong the jump is (vertical speed)
     public Transform groundCheck;      // Empty child object placed at the player's feet
@@ -63,21 +63,21 @@ public class PlayerController : MonoBehaviour
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
         //double jump for episode 3
-        if(isGrounded)
+        if (isGrounded)
         {
             extraJumps = extraJumpsValue;
-        }    
+        }
 
         //modified for episode 3
         // Jump for episode 1
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (isGrounded)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 PlaySFX(jumpClip);
             }
-            else if(extraJumps > 0)
+            else if (extraJumps > 0)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
                 extraJumps--;
@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Damage")
         {
-            PlaySFX(HurtClip, 0.4f);  
+            PlaySFX(HurtClip, 0.4f);
             health -= 25;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             StartCoroutine(BlinkRed());
@@ -127,6 +127,10 @@ public class PlayerController : MonoBehaviour
             {
                 Die();
             }
+        }
+        else if (collision.gameObject.tag == "BounchPad")
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * 2);
         }
     }
 
@@ -158,7 +162,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            if(rb.linearVelocity.y > 0)
+            if (rb.linearVelocity.y > 0)
             {
                 animator.Play("Player_jump");
             }
