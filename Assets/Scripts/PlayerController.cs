@@ -119,10 +119,20 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Damage")
         {
             PlaySFX(HurtClip, 0.4f);
-            health -= 25;
+            health -= 20;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             StartCoroutine(BlinkRed());
-
+            if (health <= 0)
+            {
+                Die();
+            }
+        }
+        else if (collision.gameObject.tag == "DamageLaser")
+        {
+            PlaySFX(HurtClip, 0.4f);
+            collision.gameObject.SetActive(false);
+            health -= 20;
+            StartCoroutine(BlinkRed());
             if (health <= 0)
             {
                 Die();
