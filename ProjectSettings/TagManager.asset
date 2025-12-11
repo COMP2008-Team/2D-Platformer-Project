@@ -8,6 +8,7 @@ TagManager:
   - BounchPad
   - CoinText
   - DamageLaser
+  - strawberry
   layers:
   - Default
   - TransparentFX
