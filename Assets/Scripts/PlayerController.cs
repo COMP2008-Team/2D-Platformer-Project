@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour
 
     private AudioSource audioSource;
     //double jump script
-    public int extraJumpsValue = 1;
+    //public int extraJumpsValue = 1;
+
+    public int extraJumpsValue = 0;
     private int extraJumps;
 
     void Start()
@@ -188,5 +190,15 @@ public class PlayerController : MonoBehaviour
         audioSource.volume = volume;
         audioSource.clip = audioClip;
         audioSource.Play();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "strawberry")
+        {
+            extraJumps = 2;
+            Destroy(collision.gameObject);
+        }
+
     }
 }
